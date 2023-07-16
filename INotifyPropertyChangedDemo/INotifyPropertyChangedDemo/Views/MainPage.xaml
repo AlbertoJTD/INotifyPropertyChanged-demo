@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INotifyPropertyChangedDemo.MainPage">
+
+    <StackLayout Margin="10">
+        <Entry Placeholder="Number 1"
+               Text="{Binding Number1}" />
+        <Entry Placeholder="Number 2"
+               Text="{Binding Number2}" />
+        <Entry Placeholder="Number 3"
+               Text="{Binding Number3}" />
+        <Entry Placeholder="Number 4"
+               Text="{Binding Number4}" />
+        <Entry Placeholder="Number 5"
+               Text="{Binding Number5}" />
+        <Entry Placeholder="Number 6"
+               Text="{Binding Number6}" />
+        <Entry Placeholder="Number 7"
+               Text="{Binding Number7}" />
+        <Entry Placeholder="Number 8"
+               Text="{Binding Number8}" />
+        <Entry Placeholder="Number 9"
+               Text="{Binding Number9}" />
+        <Entry Placeholder="Number 10"
+               Text="{Binding Number10}" />
+
+        <Entry Placeholder="Result"
+               IsEnabled="False"
+               Text="{Binding Result}"/>
+        <Button Text="Sum"
+                Command="{Binding SumCommand}"/>
+    </StackLayout>
+
+</ContentPage>
