@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INotifyPropertyChangedDemo.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace INotifyPropertyChangedDemo.Views
 		public ListPage()
 		{
 			InitializeComponent();
+			this.BindingContext = new ListPageViewModel();
 		}
 	}
 }
