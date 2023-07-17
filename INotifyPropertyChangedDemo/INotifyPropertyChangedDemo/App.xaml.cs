@@ -11,7 +11,7 @@ namespace INotifyPropertyChangedDemo
 		{
 			InitializeComponent();
 
-			MainPage = new ListPage();
+			MainPage = new MainPage();
 		}
 
 		protected override void OnStart()

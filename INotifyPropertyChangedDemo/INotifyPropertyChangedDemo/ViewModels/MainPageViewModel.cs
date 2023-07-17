@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyChanged;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
@@ -6,7 +7,8 @@ using Xamarin.Forms;
 
 namespace INotifyPropertyChangedDemo.ViewModels
 {
-	public class MainPageViewModel
+	//[AddINotifyPropertyChangedInterface]
+	public class MainPageViewModel: BaseViewModel
 	{
 		public int Number1 { get; set; }
 		public int Number2 { get; set; }

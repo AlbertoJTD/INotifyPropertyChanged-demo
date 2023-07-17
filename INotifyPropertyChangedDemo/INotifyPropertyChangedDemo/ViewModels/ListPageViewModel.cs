@@ -12,17 +12,7 @@ namespace INotifyPropertyChangedDemo.ViewModels
 {
 	public class ListPageViewModel: BaseViewModel
 	{
-		private ObservableCollection<Models.Person> people;
-
-		public ObservableCollection<Models.Person> People
-		{
-			get => people;
-			set
-			{
-				people = value;
-				OnPropertyChanged();
-			}
-		}
+		public ObservableCollection<Models.Person> People { get; set; }
 
 		public ListPageViewModel()
         {
