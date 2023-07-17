@@ -3,16 +3,28 @@ using INotifyPropertyChangedDemo.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Input;
 
 namespace INotifyPropertyChangedDemo.ViewModels
 {
-	public class ListPageViewModel
+	public class ListPageViewModel: BaseViewModel
 	{
-        public ObservableCollection<Models.Person> People { get; set; }
+		private ObservableCollection<Models.Person> people;
 
-        public ListPageViewModel()
+		public ObservableCollection<Models.Person> People
+		{
+			get => people;
+			set
+			{
+				people = value;
+				OnPropertyChanged();
+			}
+		}
+
+		public ListPageViewModel()
         {
             var data = new Faker<Models.Person>()
                 .RuleFor(x => x.Name, f => f.Person.FullName)
@@ -21,5 +33,5 @@ namespace INotifyPropertyChangedDemo.ViewModels
 
             People = new ObservableCollection<Models.Person>(data);
         }
-    }
+	}
 }
